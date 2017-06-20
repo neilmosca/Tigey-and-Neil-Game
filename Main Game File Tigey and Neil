@@ -1,0 +1,13 @@
+import pygame, sys
+from pygame.locals import *
+
+pygame.init()
+background = pygame.display.set_mode((1440, 810))
+pygame.display.set_caption('Tigey and Neil\'s Game')
+green = (128, 128, 0)
+background.fill(green)
+while True: # main game loop
+     for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
