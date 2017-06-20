@@ -6,6 +6,7 @@ background = pygame.display.set_mode((1440, 810))
 pygame.display.set_caption('Tigey and Neil\'s Game')
 green = (128, 128, 0)
 background.fill(green)
+print('bob')
 # comment blah blah
 while True: # main game loop
      for event in pygame.event.get():
