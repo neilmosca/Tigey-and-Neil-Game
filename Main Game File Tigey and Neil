@@ -15,7 +15,7 @@ def load_game():
 
 def play_game():
     load_game()
-    print('yay')
+    print('practing commiting')
 
 def main():
     pygame.init()
