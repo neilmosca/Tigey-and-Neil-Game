@@ -1,13 +1,29 @@
-import pygame, sys
+import pygame, sys, os
 from pygame.locals import *
 
-pygame.init()
-background = pygame.display.set_mode((1440, 810))
-pygame.display.set_caption('Tigey and Neil\'s Game')
-green = (128, 128, 0)
-background.fill(green)
-while True: # main game loop
-     for event in pygame.event.get():
-        if event.type == QUIT:
-            pygame.quit()
-            sys.exit()
+def load_game():
+    screen = pygame.display.set_mode((1440, 810))
+    pygame.display.set_caption('Tigey and Neil\'s Game')
+    player_down_stationary = pygame.image.load('Stationary Down.png')
+    player_down_swing1 = pygame.image.load('Sword Swing Down Left.png')
+    player_down_swing2 = pygame.image.load('Sword Swing Down Straight.png')
+    player_down_swing3 = pygame.image.load('Sword Swing Down Right.png')
+    player_up_swing1 = pygame.image.load('Sword Swing Up Left.png')
+    world_map = pygame.image.load('picture_of_map.png')
+    pygame.display.update(screen.blit(world_map, (475.5, 170.5)))
+    pygame.display.update(screen.blit(player_down_stationary, (720, 405)))
+
+def play_game():
+    load_game()
+
+def main():
+    pygame.init()
+    play_game()
+    while True:  # main game loop
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                pygame.quit()
+                sys.exit()
+
+if __name__ == '__main__':
+    main()
