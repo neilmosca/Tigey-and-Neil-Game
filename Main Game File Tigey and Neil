@@ -15,6 +15,7 @@ def load_game():
 
 def play_game():
     load_game()
+    print('yay')
 
 def main():
     pygame.init()
